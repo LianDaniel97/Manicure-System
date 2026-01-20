@@ -74,3 +74,30 @@
 
                         <button type="button" class="btn-primary" id="btn-next-1">המשך &larr;</button>
                     </div>
+
+                    <div id="step-2" class="wizard-step">
+                        <h3>בחירת מועד</h3>
+                        <p style="margin-bottom: 20px; color: var(--text-color);">אנא בחרי תאריך ומטפלת</p>
+                        <div class="form-group">
+                            <label for="staffSelect">בחרי מטפלת</label>
+                            <select id="staffSelect" required>
+                                <option value="">בחר מטפלת...</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dateSelect">תאריך</label>
+                            <input type="date" id="dateSelect" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>שעות פנויות</label>
+                            <div id="time-slots" class="time-slots-grid">
+                            <input type="hidden" id="selectedTime">
+                        </div>
+
+                        <div class="step-buttons">
+                            <button type="button" class="btn-outline" id="btn-prev-2">חזור</button>
+                            <button type="button" class="btn-primary" id="btn-next-2" disabled>המשך &larr;</button>
+                        </div>
+                    </div>
