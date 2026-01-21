@@ -23,7 +23,11 @@ const SERVICES = [
         description: 'טיפול יסודי בכפות הרגליים, הסרת עור קשה וטיפול בציפורניים.',
         price: 180,
         durationMin: 60,
+<<<<<<< Updated upstream
         image: 'https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?auto=format&fit=crop&q=80&w=600',
+=======
+        image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&q=80&w=600',
+>>>>>>> Stashed changes
         category: 'pedicure'
     },
     {
