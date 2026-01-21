@@ -57,4 +57,43 @@
     background-size: cover;
     background-position: center;
 }
+.service-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-content h3 {
+    margin-bottom: 10px;
+    color: #333333;
+    /* צבע טקסט כהה */
+}
+
+.service-meta {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #7b4b53;
+    /* צבע האקצנט הבורדו שלך (Accent Color) */
+    margin: 15px 0;
+}
+
+.btn-outline {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+    border: 2px solid #d88995;
+    /* מסגרת ורודה */
+    color: #d88995;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    /* ביטול קו תחתון של קישור משיעור 1 */
+}
+
+.btn-outline:hover {
+    background-color: #d88995;
+    color: white;
+}
 
