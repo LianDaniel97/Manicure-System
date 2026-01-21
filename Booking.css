@@ -1,0 +1,14 @@
+.wizard-step {
+    display: none;
+}
+
+.wizard-step.active-step {
+    display: block;
+}
+booking-progress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
