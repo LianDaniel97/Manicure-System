@@ -34,3 +34,12 @@ booking-progress {
     cursor: pointer;
     border-radius: 4px;
 }
+.time-slot:hover {
+    background: #eee;
+}
+
+.time-slot.selected {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
