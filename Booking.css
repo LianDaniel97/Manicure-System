@@ -20,3 +20,17 @@ booking-progress {
 .step.active {
     color: var(--primary-color);
 }
+
+.time-slots-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.time-slot {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    cursor: pointer;
+    border-radius: 4px;
+}
