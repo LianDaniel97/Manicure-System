@@ -12,3 +12,11 @@ booking-progress {
     border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
 }
+.step {
+    font-weight: bold;
+    color: #ccc;
+}
+
+.step.active {
+    color: var(--primary-color);
+}
