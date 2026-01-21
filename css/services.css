@@ -28,4 +28,18 @@
     gap: 30px;
     padding-bottom: 50px;
 }
+/* רספונסיביות לפי שיעור 4 - Breakpoints */
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* טאבלט: 2 עמודות */
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* מחשב: 3 עמודות */
+    }
+}
 
