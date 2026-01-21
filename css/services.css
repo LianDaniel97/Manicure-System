@@ -20,3 +20,12 @@
     /* צבע רקע ורוד במעבר עכבר */
     color: white;
 }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* מובייל: עמודה אחת */
+    gap: 30px;
+    padding-bottom: 50px;
+}
+
