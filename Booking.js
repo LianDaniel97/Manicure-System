@@ -127,3 +127,19 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
+    
+     var dateInput = document.getElementById('dateSelect');
+    if (dateInput) {
+        dateInput.min = new Date().toISOString().split('T')[0];
+
+        var staffSelect = document.getElementById('staffSelect');
+        var handleChange = function () {
+            bookingState.staffId = staffSelect.value;
+            bookingState.date = dateInput.value;
+            if (bookingState.staffId && bookingState.date) {
+                renderTimeSlots();
+            }
+        };
+        dateInput.addEventListener('change', handleChange);
+        staffSelect.addEventListener('change', handleChange);
+    }
