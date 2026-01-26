@@ -53,3 +53,22 @@ document.addEventListener('DOMContentLoaded', function () {
             updateServiceInfo(id);
         });
     }
+    function updateServiceInfo(id) {
+        var service = null;
+        for (var i = 0; i < SERVICES.length; i++) {
+            if (SERVICES[i].id === id) {
+                service = SERVICES[i];
+                break;
+            }
+        }
+
+        var infoDiv = document.getElementById('selected-service-info');
+        if (service && infoDiv) {
+            infoDiv.innerHTML = '<strong>' + service.name + '</strong><br>' +
+                service.description + '<br>' +
+                'מחיר: ₪' + service.price + ' | משך: ' + service.durationMin + ' דק\'';
+            infoDiv.style.display = 'block';
+        } else if (infoDiv) {
+            infoDiv.style.display = 'none';
+        }
+    }
