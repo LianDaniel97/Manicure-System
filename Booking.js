@@ -41,3 +41,15 @@ document.addEventListener('DOMContentLoaded', function () {
             serviceSelect.appendChild(option);
         }
     }
+    if (bookingState.serviceId && serviceSelect) {
+        serviceSelect.value = bookingState.serviceId;
+        updateServiceInfo(bookingState.serviceId);
+    }
+
+    if (serviceSelect) {
+        serviceSelect.addEventListener('change', function () {
+            var id = this.value;
+            bookingState.serviceId = id;
+            updateServiceInfo(id);
+        });
+    }
