@@ -43,3 +43,14 @@ booking-progress {
     color: white;
     border-color: var(--primary-color);
 }
+.time-slot:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #ddd;
+}
+
+.step-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-lg);
+}
