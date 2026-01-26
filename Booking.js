@@ -31,3 +31,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         return true;
     }
+      var serviceSelect = document.getElementById('serviceSelect');
+    if (serviceSelect) {
+        for (var i = 0; i < SERVICES.length; i++) {
+            var s = SERVICES[i];
+            var option = document.createElement('option');
+            option.value = s.id;
+            option.text = s.name;
+            serviceSelect.appendChild(option);
+        }
+    }
