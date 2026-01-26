@@ -104,3 +104,26 @@ document.addEventListener('DOMContentLoaded', function () {
             showStep(2);
         });
     }
+        function updateStaffOptions() {
+        var staffSelect = document.getElementById('staffSelect');
+        if (!staffSelect) return;
+
+        staffSelect.innerHTML = '<option value="">בחר מטפלת...</option>';
+
+        for (var i = 0; i < STAFF.length; i++) {
+            var st = STAFF[i];
+            var isSpecialist = false;
+            for (var j = 0; j < st.specialties.length; j++) {
+                if (st.specialties[j] === bookingState.serviceId) {
+                    isSpecialist = true;
+                    break;
+                }
+            }
+            if (isSpecialist) {
+                var option = document.createElement('option');
+                option.value = st.id;
+                option.text = st.name;
+                staffSelect.appendChild(option);
+            }
+        }
+    }
