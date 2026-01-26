@@ -72,3 +72,14 @@ document.addEventListener('DOMContentLoaded', function () {
             infoDiv.style.display = 'none';
         }
     }
+     var btnNext1 = document.getElementById('btn-next-1');
+    if (btnNext1) {
+        btnNext1.addEventListener('click', function () {
+            var name = document.getElementById('customerName').value.trim();
+            var phone = document.getElementById('customerPhone').value.trim();
+            var serviceId = serviceSelect.value;
+
+            if (name === "" || phone === "" || serviceId === "") {
+                alert('אנא מלאי את כל הפרטים');
+                return;
+            }
