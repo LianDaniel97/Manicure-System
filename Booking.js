@@ -83,3 +83,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('אנא מלאי את כל הפרטים');
                 return;
             }
+                    
+            for (var j = 0; j < name.length; j++) {
+                if (name[j] >= '0' && name[j] <= '9') {
+                    alert('השם לא יכול להכיל מספרים');
+                    return;
+                }
+            }
+
+            if (!isPhoneValid(phone)) {
+                alert('אנא הזיני מספר טלפון תקין הכולל בדיוק 10 ספרות');
+                return;
+            }
+
+            bookingState.customerName = name;
+            bookingState.customerPhone = phone;
+            bookingState.serviceId = serviceId;
+
+            updateStaffOptions();
+            showStep(2);
+        });
+    }
