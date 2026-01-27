@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         return true;
     }
-      var serviceSelect = document.getElementById('serviceSelect');
+
+    var serviceSelect = document.getElementById('serviceSelect');
     if (serviceSelect) {
         for (var i = 0; i < SERVICES.length; i++) {
             var s = SERVICES[i];
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
             serviceSelect.appendChild(option);
         }
     }
+
     if (bookingState.serviceId && serviceSelect) {
         serviceSelect.value = bookingState.serviceId;
         updateServiceInfo(bookingState.serviceId);
@@ -53,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             updateServiceInfo(id);
         });
     }
+
     function updateServiceInfo(id) {
         var service = null;
         for (var i = 0; i < SERVICES.length; i++) {
@@ -72,7 +75,8 @@ document.addEventListener('DOMContentLoaded', function () {
             infoDiv.style.display = 'none';
         }
     }
-     var btnNext1 = document.getElementById('btn-next-1');
+
+    var btnNext1 = document.getElementById('btn-next-1');
     if (btnNext1) {
         btnNext1.addEventListener('click', function () {
             var name = document.getElementById('customerName').value.trim();
@@ -104,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
             showStep(2);
         });
     }
+
         function updateStaffOptions() {
         var staffSelect = document.getElementById('staffSelect');
         if (!staffSelect) return;
@@ -127,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
-    
+
      var dateInput = document.getElementById('dateSelect');
     if (dateInput) {
         dateInput.min = new Date().toISOString().split('T')[0];
@@ -142,4 +147,45 @@ document.addEventListener('DOMContentLoaded', function () {
         };
         dateInput.addEventListener('change', handleChange);
         staffSelect.addEventListener('change', handleChange);
+    }
+    function renderTimeSlots() {
+        var container = document.getElementById('time-slots');
+        if (!container) return;
+        container.innerHTML = '';
+
+        var staff = null;
+        for (var i = 0; i < STAFF.length; i++) {
+            if (STAFF[i].id === bookingState.staffId) {
+                staff = STAFF[i];
+                break;
+            }
+        }
+        if (!staff) return;
+
+        for (var k = 0; k < staff.availableHours.length; k++) {
+            var time = staff.availableHours[k];
+            var isAvailable = appointmentManager.isSlotAvailable(staff.id, bookingState.date, time);
+
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'time-slot';
+            btn.textContent = time;
+
+            if (!isAvailable) {
+                btn.disabled = true;
+            }
+            if (bookingState.time === time) {
+                btn.classList.add('selected');
+            }
+
+            btn.addEventListener('click', function () {
+                var slots = document.querySelectorAll('.time-slot');
+                for (var s = 0; s < slots.length; s++) slots[s].classList.remove('selected');
+
+                this.classList.add('selected');
+                bookingState.time = this.textContent;
+                document.getElementById('btn-next-2').disabled = false;
+            });
+            container.appendChild(btn);
+        }
     }
