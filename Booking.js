@@ -189,3 +189,13 @@ document.addEventListener('DOMContentLoaded', function () {
             container.appendChild(btn);
         }
     }
+    
+    function showStep(stepNum) {
+        var wizardSteps = document.querySelectorAll('.wizard-step');
+        for (var i = 0; i < wizardSteps.length; i++) wizardSteps[i].classList.remove('active-step');
+        document.getElementById('step-' + stepNum).classList.add('active-step');
+
+        var steps = document.querySelectorAll('.step');
+        for (var j = 0; j < steps.length; j++) steps[j].classList.remove('active');
+        if (steps[stepNum - 1]) steps[stepNum - 1].classList.add('active');
+    }
