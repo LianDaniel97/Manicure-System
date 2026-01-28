@@ -199,3 +199,22 @@ document.addEventListener('DOMContentLoaded', function () {
         for (var j = 0; j < steps.length; j++) steps[j].classList.remove('active');
         if (steps[stepNum - 1]) steps[stepNum - 1].classList.add('active');
     }
+    document.getElementById('btn-next-2').addEventListener('click', function () {
+        var service = null;
+        for (var i = 0; i < SERVICES.length; i++) {
+            if (SERVICES[i].id === bookingState.serviceId) { service = SERVICES[i]; break; }
+        }
+        var staff = null;
+        for (var j = 0; j < STAFF.length; j++) {
+            if (STAFF[j].id === bookingState.staffId) { staff = STAFF[j]; break; }
+        }
+
+        document.getElementById('summary-service').textContent = service.name;
+        document.getElementById('summary-staff').textContent = staff.name;
+        document.getElementById('summary-date').textContent = bookingState.date;
+        document.getElementById('summary-time').textContent = bookingState.time;
+        document.getElementById('summary-name').textContent = bookingState.customerName;
+        document.getElementById('summary-price').textContent = '₪' + service.price;
+
+        showStep(3);
+    });
