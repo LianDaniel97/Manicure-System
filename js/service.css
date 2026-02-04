@@ -55,3 +55,22 @@
     background-size: cover;
     background-position: center;
 }
+.service-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-content h3 {
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.service-meta {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #7b4b53;
+    margin: 15px 0;
+}
