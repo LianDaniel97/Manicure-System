@@ -16,3 +16,42 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fa-regular fa-gem logo-icon"></i> Manicure Studio</a>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="פתח תפריט">☰</button>
+                <ul class="nav-list">
+                    <li><a href="index.html">בית</a></li>
+                    <li><a href="services.html" class="btn-primary">הזמן תור</a></li>
+                    <li><a href="appointments.html">התורים שלי</a></li>
+                    <li><a href="index.html#contact">צור קשר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>תפריט טיפולים</h1>
+                <p>בחרי את הטיפול המושלם עבורך</p>
+            </div>
+        </section>
+
+        <section class="services-catalog">
+            <div class="container">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">הכל</button>
+                    <button class="filter-btn" data-filter="manicure">מניקור</button>
+                    <button class="filter-btn" data-filter="pedicure">פדיקור</button>
+                    <button class="filter-btn" data-filter="spa">ספא</button>
+                </div>
+
+                <div id="services-grid" class="services-grid">
+                </div>
+            </div>
+        </section>
+    </main>
