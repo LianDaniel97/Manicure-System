@@ -41,3 +41,17 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+.service-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
