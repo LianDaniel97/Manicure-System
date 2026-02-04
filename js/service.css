@@ -74,3 +74,18 @@
     color: #7b4b53;
     margin: 15px 0;
 }
+.btn-outline {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+    border: 2px solid #d88995;
+    color: #d88995;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-outline:hover {
+    background-color: #d88995;
+    color: white;
+}
