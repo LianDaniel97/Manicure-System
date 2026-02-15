@@ -85,4 +85,38 @@ $(document).ready(function () {
             </div> 
              `;
     }
+     // Sort Active by date (asc)
+    active.sort((a, b) => new Date(a.date + 'T' + a.time) - new Date(b.date + 'T' + b.time));
+
+    // Sort Past by date (desc)
+    past.sort((a, b) => new Date(b.date + 'T' + b.time) - new Date(a.date + 'T' + a.time));
+
+    // Render Active
+    active.forEach(app => container.append(renderCard(app, 'active')));
+
+    // Render Past
+    if (past.length > 0) {
+        if (active.length > 0) container.append('<div class="appointments-divider"><h3>היסטוריית טיפולים</h3></div>');
+        else if (cancelled.length > 0) container.append('<div class="appointments-divider"><h3>היסטוריית טיפולים</h3></div>');
+
+        past.forEach(app => container.append(renderCard(app, 'past')));
+    }
+
+    // Render Cancelled
+    if (cancelled.length > 0) {
+        container.append('<div class="appointments-divider"><h3>תורים מבוטלים</h3></div>');
+        cancelled.forEach(app => container.append(renderCard(app, 'cancelled')));
+    }
+
+    // Cancel Logic
+    $(document).on('click', '.btn-cancel', function () {
+        const id = String($(this).data('id'));
+        if (confirm('האם את בטוחה שברצונך לבטל את התור?')) {
+            if (manager.cancelAppointment(id)) {
+                location.reload();
+            } else {
+                alert('שגיאה בביטול התור');
+            }
+        }
+    });
         });
