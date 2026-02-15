@@ -27,5 +27,33 @@ $(document).ready(function () {
         // Reload to get new data
         appointments = manager.getUserAppointments();
     }
+    const container = $('#appointments-list');
+    const noData = $('#no-appointments');
 
+    if (appointments.length === 0) {
+        noData.show();
+        return;
+    }
+
+    const today = new Date().toISOString().split('T')[0];
+    const now = new Date();
+
+    // Grouping
+    const active = [];
+    const past = [];
+    const cancelled = [];
+
+    appointments.forEach(app => {
+        if (app.status === 'cancelled') {
+            cancelled.push(app);
+            return;
+        }
+
+        const appDate = new Date(app.date + 'T' + app.time);
+        if (appDate < now) {
+            past.push(app);
+        } else {
+            active.push(app);
+        }
+    });
         });
