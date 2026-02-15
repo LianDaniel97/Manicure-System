@@ -13,4 +13,19 @@ $(document).ready(function () {
             customerName: 'רוני דוגמה',
             customerPhone: '0500000000'
         });
-        }});
+         // Add a cancelled appointment
+        const cancelledApp = manager.addAppointment({
+            serviceId: 's2',
+            staffId: 'st2',
+            date: '2024-02-15',
+            time: '14:00',
+            customerName: 'רוני דוגמה',
+            customerPhone: '0500000000'
+        });
+        manager.cancelAppointment(cancelledApp.id);
+
+        // Reload to get new data
+        appointments = manager.getUserAppointments();
+    }
+
+        });
