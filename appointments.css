@@ -39,3 +39,20 @@
 .appointment-card:hover {
     top: -2px;
 }
+.app-header h3 {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.status-badge.confirmed {
+    background-color: #dcfce7;
+    color: #166534;
+}
