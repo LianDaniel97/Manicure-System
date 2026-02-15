@@ -1,0 +1,16 @@
+$(document).ready(function () {
+    const manager = new AppointmentManager();
+    let appointments = manager.getUserAppointments();
+
+    // Mock Data for Demonstration if empty
+    if (appointments.length === 0) {
+        // Add a past appointment
+        manager.addAppointment({
+            serviceId: 's1',
+            staffId: 'st1',
+            date: '2023-12-01',
+            time: '10:00',
+            customerName: 'רוני דוגמה',
+            customerPhone: '0500000000'
+        });
+        }});
