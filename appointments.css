@@ -91,3 +91,14 @@
     background-color: #e5e5e5;
     color: #666;
 }
+/* Cancelled Appointments */
+.appointment-card.cancelled-appointment {
+    opacity: 0.7;
+    border: 1px dashed #ccc;
+}
+
+.appointments-divider {
+    text-align: center;
+    margin: 30px 0 10px;
+    position: relative;
+}
