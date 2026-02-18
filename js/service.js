@@ -27,3 +27,4 @@ var card = '<article class="service-card">' +
 '</article>';
 
 container.append(card);
+renderServices('all');
