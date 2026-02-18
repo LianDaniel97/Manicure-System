@@ -28,3 +28,10 @@ var card = '<article class="service-card">' +
 
 container.append(card);
 renderServices('all');
+$('.filter-btn').on('click', function () {
+    $('.filter-btn').removeClass('active');
+    $(this).addClass('active');
+
+    var selectedCategory = $(this).attr('data-filter');
+    renderServices(selectedCategory);
+});
