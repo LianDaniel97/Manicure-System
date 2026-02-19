@@ -37,6 +37,10 @@ The project was developed using modern client-side web technologies:
   
     Step 3: Review the appointment summary and click "Confirm Booking."
   
-5. Confirmation: Upon completion, a success message will be displayed.
+4. Confirmation: Upon completion, a success message will be displayed.
+
+Link:
+
+https://ronisanderovich1502-cloud.github.io/frontend-capstone-team-21/
 
    
