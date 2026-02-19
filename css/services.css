@@ -1,0 +1,109 @@
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    /* שימוש בפיקסלים במקום משתנה */
+    margin-bottom: 30px;
+    /* שימוש בפיקסלים במקום משתנה */
+    flex-wrap: wrap;
+    /* שימוש ב-Flexbox משיעור 5 */
+}
+
+.filter-btn {
+    background: none;
+    border: 2px solid #d88995;
+
+    padding: 8px 16px;
+    /* החלפת rem בפיקסלים לפי שיעור 3 */
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: #d88995;
+    /* צבע רקע ורוד במעבר עכבר */
+    color: white;
+}
+
+/* הגדרת הגריד לפי שיעור 5 (Grid) ושיעור 4 (Media Queries) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* מובייל: עמודה אחת */
+    gap: 30px;
+    padding-bottom: 50px;
+}
+
+/* רספונסיביות לפי שיעור 4 - Breakpoints */
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* טאבלט: 2 עמודות */
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* מחשב: 3 עמודות */
+    }
+}
+
+.service-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    /* הוספת צל קבוע לפי עקרונות העיצוב בשיעור 7 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.service-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-content h3 {
+    margin-bottom: 10px;
+    color: #333333;
+    /* צבע טקסט כהה */
+}
+
+.service-meta {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #7b4b53;
+    /* צבע האקצנט הבורדו שלך (Accent Color) */
+    margin: 15px 0;
+}
+
+.btn-outline {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+    border: 2px solid #d88995;
+    /* מסגרת ורודה */
+    color: #d88995;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    /* ביטול קו תחתון של קישור משיעור 1 */
+}
+
+.btn-outline:hover {
+    background-color: #d88995;
+    color: white;
+}
