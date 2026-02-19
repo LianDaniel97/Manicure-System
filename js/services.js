@@ -1,10 +1,12 @@
 
 $(document).ready(function () {
+
     if (typeof SERVICES === 'undefined') {
         $('main .container').first().prepend('<div style="background: #f8d7da; color: #721c24; padding: 15px; border: 1px solid #f5c6cb; border-radius: 5px; margin-bottom: 20px; text-align: center; direction: rtl;"><strong>שגיאה:</strong> קובץ הנתונים (data.js) לא נטען. אנא רענני את הדף (Ctrl+F5). אם הבעיה נמשכת, ודאי שהקובץ קיים.</div>');
         console.error('CRITICAL: SERVICES is not defined. data.js might be missing or failed to load.');
         return;
     }
+
 
     // בחירת הקונטיינר שבו יופיעו השירותים (מצגת 10)
     var container = $('#services-grid');
