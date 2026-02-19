@@ -42,7 +42,7 @@
             </div>
         </section>
 
-<section class="booking-section">
+        <section class="booking-section">
             <div class="container">
                 <div id="booking-wizard" class="styled-form">
                     <div class="booking-progress">
@@ -93,48 +93,48 @@
                         <div class="form-group">
                             <label>שעות פנויות</label>
                             <div id="time-slots" class="time-slots-grid">
-                            <input type="hidden" id="selectedTime">
+                                <input type="hidden" id="selectedTime">
+                            </div>
+
+                            <div class="step-buttons">
+                                <button type="button" class="btn-outline" id="btn-prev-2">חזור</button>
+                                <button type="button" class="btn-primary" id="btn-next-2" disabled>המשך &larr;</button>
+                            </div>
                         </div>
 
-                        <div class="step-buttons">
-                            <button type="button" class="btn-outline" id="btn-prev-2">חזור</button>
-                            <button type="button" class="btn-primary" id="btn-next-2" disabled>המשך &larr;</button>
+                        <div id="step-3" class="wizard-step">
+                            <h3>סיכום ואישור</h3>
+                            <div class="summary-box">
+                                <p><strong>טיפול:</strong> <span id="summary-service"></span></p>
+                                <p><strong>מטפלת:</strong> <span id="summary-staff"></span></p>
+                                <p><strong>תאריך:</strong> <span id="summary-date"></span></p>
+                                <p><strong>שעה:</strong> <span id="summary-time"></span></p>
+                                <p><strong>שם:</strong> <span id="summary-name"></span></p>
+                                <p><strong>מחיר:</strong> <span id="summary-price"></span></p>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="btn-outline" id="btn-prev-3">חזור</button>
+                                <button type="button" class="btn-primary" id="btn-submit">אשר הזמנה</button>
+                            </div>
                         </div>
-                    </div>
 
-                     <div id="step-3" class="wizard-step">
-                        <h3>סיכום ואישור</h3>
-                        <div class="summary-box">
-                            <p><strong>טיפול:</strong> <span id="summary-service"></span></p>
-                            <p><strong>מטפלת:</strong> <span id="summary-staff"></span></p>
-                            <p><strong>תאריך:</strong> <span id="summary-date"></span></p>
-                            <p><strong>שעה:</strong> <span id="summary-time"></span></p>
-                            <p><strong>שם:</strong> <span id="summary-name"></span></p>
-                            <p><strong>מחיר:</strong> <span id="summary-price"></span></p>
+                        <div id="success-message" class="wizard-step" style="text-align: center;">
+                            <h2 style="color: var(--primary-color);">התור נקבע בהצלחה!</h2>
+                            <p style="margin-bottom: 30px;">מחכים לראותך בסטודיו שלנו.</p>
+                            <a href="appointments.html" class="btn-primary">לצפייה בתורים שלי</a>
                         </div>
-                                                <div class="step-buttons">
-                            <button type="button" class="btn-outline" id="btn-prev-3">חזור</button>
-                            <button type="button" class="btn-primary" id="btn-submit">אשר הזמנה</button>
-                        </div>
-                    </div>
-                    
-                    <div id="success-message" class="wizard-step" style="text-align: center;">
-                        <h2 style="color: var(--primary-color);">התור נקבע בהצלחה!</h2>
-                        <p style="margin-bottom: 30px;">מחכים לראותך בסטודיו שלנו.</p>
-                        <a href="appointments.html" class="btn-primary">לצפייה בתורים שלי</a>
                     </div>
                 </div>
-            </div>
         </section>
     </main>
-        <footer class="main-footer">
+    <footer class="main-footer">
         <div class="container">
             <p>&copy; 2024 <i class="fa-regular fa-gem logo-icon"></i> Manicure Studio. כל הזכויות שמורות.</p>
         </div>
     </footer>
 
     <script src="js/data.js"></script>
-    <script src="js/AppointmentManager.js"></script>
+    <script src="js/appointment_manager.js"></script>
     <script src="js/main.js"></script>
     <script src="js/booking.js"></script>
 </body>

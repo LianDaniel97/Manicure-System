@@ -19,6 +19,7 @@ class AppointmentManager {
     getAppointments() {
         return this.appointments;
     }
+
     // Get appointments for a specific user (by phone for simplicity, though real auth is better)
     // For this project, we might just show all stored locally or filter if we implemented a "login"
     // Since there's no login, we'll assume the user sees all appointments stored in *their* browser.
