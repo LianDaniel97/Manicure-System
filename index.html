@@ -1,11 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Manicure Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Rubik:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
+
 <body>
-    <h1>Check</h1>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fa-regular fa-gem logo-icon"></i> Manicure Studio</a>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="פתח תפריט">☰</button>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">בית</a></li>
+
+                    <li><a href="services.html" class="btn-primary">הזמן תור</a></li>
+                    <li><a href="appointments.html">התורים שלי</a></li>
+
+                    <li><a href="#contact">צור קשר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>היופי שלך, המומחיות שלנו</h1>
+                <p>סטודיו בוטיק למניקור, פדיקור וטיפולי יופי שיגרמו לך להרגיש נפלא.</p>
+                <a href="services.html" class="btn-cta">שרייני מקום עכשיו</a>
+            </div>
+        </section>
+
+        <section id="stats" style="padding: 60px 0; background-color: var(--secondary-color); text-align: center;">
+            <div class="container">
+                <div class="stats-card">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <i class="fa-solid fa-users stat-icon"></i>
+                            <div class="stat-number">300+</div>
+                            <div class="stat-label">לקוחות מרוצות</div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fa-solid fa-star stat-icon"></i>
+                            <div class="stat-number">5.0</div>
+                            <div class="stat-label">דירוג כוכבים</div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fa-solid fa-user-graduate stat-icon"></i>
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">מומחיות</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" style="padding: 64px 0; background-color: #fff;">
+            <div class="container">
+                <h2
+                    style="text-align: center; color: var(--primary-color); margin-bottom: 40px; font-family: var(--font-heading);">
+                    הכירי את המומחיות שלנו</h2>
+                <div class="team-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px;">
+                    <!-- Dana -->
+                    <div class="team-card" style="text-align: center;">
+                        <img src="images/staff_dana.png" alt="דנה כהן"
+                            style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; border: 4px solid var(--secondary-color);">
+                        <h3 style="color: var(--accent-color); margin-bottom: 8px;">דנה כהן</h3>
+                        <p style="color: var(--text-color);">מומחית למניקור קלאסי, ג'ל ובניית ציפורניים. דואגת לפרטים
+                            הקטנים ביותר לתוצאה מושלמת.</p>
+                    </div>
+                    <!-- Michal -->
+                    <div class="team-card" style="text-align: center;">
+                        <img src="images/staff_michal.png" alt="מיכל לוי"
+                            style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; border: 4px solid var(--secondary-color);">
+                        <h3 style="color: var(--accent-color); margin-bottom: 8px;">מיכל לוי</h3>
+                        <p style="color: var(--text-color);">מומחית פדיקור וטיפולי ספא. תדאג שתצאי מכאן מרחפת ורגועה.
+                        </p>
+                    </div>
+                    <!-- Noa -->
+                    <div class="team-card" style="text-align: center;">
+                        <img src="images/staff_noa.png" alt="נועה בר"
+                            style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; border: 4px solid var(--secondary-color);">
+                        <h3 style="color: var(--accent-color); margin-bottom: 8px;">נועה בר</h3>
+                        <p style="color: var(--text-color);">אומנית ציפורניים יצירתית. מתמחה בכל סוגי הטיפולים, קישוטים
+                            ועיצובים מודרניים.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" style="padding: 64px 0; background-color: #fff;">
+            <div class="container">
+                <h2
+                    style="text-align: center; color: var(--primary-color); margin-bottom: 16px; font-family: var(--font-heading);">
+                    קצת עלינו</h2>
+                <div class="about-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <h3 style="color: var(--text-color); margin-bottom: 8px;">הסטוריית הסטודיו</h3>
+                    <p>הסטודיו הוקם בשנת 2024 מתוך אהבה לאסתטיקה וטיפוח. המטרה שלנו היא לספק חוויה מרגיעה ומפנקת לצד
+                        תוצאות מקצועיות ומושלמות. אנו מאמינים שכל אישה ראויה להרגיש מטופחת ובטוחה בעצמה.</p>
+                    <p>הצוות שלנו עובר הכשרות מקצועיות שוטפות כדי להישאר בחזית הטכנולוגיה והטרנדים בעולם המניקור
+                        והפדיקור.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="contact" style="padding: 64px 0; background-color: var(--secondary-color);">
+        <div class="container">
+            <h2
+                style="text-align: center; color: var(--accent-color); margin-bottom: 32px; font-family: var(--font-heading);">
+                צור קשר</h2>
+
+            <p style="text-align: center; margin-bottom: 30px;">מוזמנות ליצור איתנו קשר ברשתות החברתיות:</p>
+
+            <div class="social-links" style="text-align: center;">
+                <h3 style="margin-bottom: 20px; color: var(--text-color);">עקבו אחרינו</h3>
+                <div style="display: flex; gap: 20px; justify-content: center; font-size: 2rem;">
+                    <a href="https://instagram.com" target="_blank" style="color: #E1306C;"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" style="color: #1877F2;"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 <i class="fa-regular fa-gem logo-icon"></i> Manicure Studio. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
 </body>
-</html>
