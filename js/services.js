@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     // בחירת הקונטיינר שבו יופיעו השירותים (מצגת 10)
     var container = $('#services-grid');
