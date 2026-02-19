@@ -3,11 +3,4 @@ reference_files/
 reference_files/
 
 # Restored local files (do not push)
-services.html
-appointments.html
-css/services.css
-css/appointments.css
-js/services.js
-js/appointments.js
-js/AppointmentManager.js
-js/contact.js
+
