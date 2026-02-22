@@ -41,6 +41,6 @@ The project was developed using modern client-side web technologies:
 
 Link:
 
-https://ronisanderovich1502-cloud.github.io/frontend-capstone-team-21/
+ https://liandaniel97.github.io/Manicure-System/
 
    
