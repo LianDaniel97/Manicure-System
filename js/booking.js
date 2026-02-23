@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     var appointmentManager = new AppointmentManager();
 
-    // שליפה מ-LocalStorage (מצגת 8)
-    var preSelectedServiceId = localStorage.getItem('selectedService');
-
-    var bookingState = {
+    const urlParams = new URLSearchParams(window.location.search);
+    let preSelectedServiceId = urlParams.get('service') || localStorage.getItem('selectedService');
+   
+       var bookingState = {
         serviceId: preSelectedServiceId || '',
         customerName: '',
         customerPhone: '',
